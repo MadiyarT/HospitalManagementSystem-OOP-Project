@@ -3,10 +3,10 @@ package com.example.githubintellijhmsoopproject;
 import java.util.ArrayList;
 import java.util.List;
 
-class MedicalRecord {
+public class MedicalRecord {
+
     private Patient patient;
     private List<String> diagnoses = new ArrayList<>();
-    private List<Medicine> medicines = new ArrayList<>();
 
     public MedicalRecord(Patient patient) {
         this.patient = patient;
@@ -16,13 +16,13 @@ class MedicalRecord {
         diagnoses.add(diagnosis);
     }
 
-    public void prescribeMedicine(Medicine medicine) {
-        medicines.add(medicine);
+    public List<String> getDiagnoses() {
+        return diagnoses;
     }
 
-    public void showRecord() {
-        System.out.println("Medical Record for " + patient.getName());
-        System.out.println("Diagnoses: " + diagnoses);
-        System.out.println("Medicines: " + medicines);
+    @Override
+    public String toString() {
+        return "MedicalRecord{patient=" + patient.getName() +
+                ", diagnoses=" + diagnoses + "}";
     }
 }

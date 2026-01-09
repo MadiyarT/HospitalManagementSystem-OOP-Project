@@ -1,23 +1,40 @@
 package com.example.githubintellijhmsoopproject;
 
-class Doctor {
-    private int id;
-    private String name;
+public class Doctor extends Person {
+
     private String specialization;
     private Department department;
 
-    public Doctor(int id, String name, String specialization, Department department) {
-        this.id = id;
-        this.name = name;
+
+    public Doctor(int id, String name, int age, String specialization, Department department) {
+        super(id, name, age); // super()
+        setSpecialization(specialization);
+        setDepartment(department);
+    }
+
+    public void setSpecialization(String specialization) {
+        if (specialization == null || specialization.isEmpty())
+            throw new IllegalArgumentException("Invalid specialization");
         this.specialization = specialization;
+    }
+
+    public void setDepartment(Department department) {
+        if (department == null)
+            throw new IllegalArgumentException("Invalid department");
         this.department = department;
     }
 
-    public int getId() { return id; }
-    public String getName() { return name; }
+    public String getSpecialization() { return specialization; }
+    public Department getDepartment() { return department; }
+
+
+    @Override
+    public void work() {
+        System.out.println("Doctor is treating patients");
+    }
 
     @Override
     public String toString() {
-        return "Doctor{id=" + id + ", name='" + name + "', specialization='" + specialization + "', department=" + department.getName() + "}";
+        return "Doctor -> " + super.toString() + ", Specialization=" + specialization;
     }
 }

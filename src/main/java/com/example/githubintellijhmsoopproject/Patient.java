@@ -1,26 +1,34 @@
 package com.example.githubintellijhmsoopproject;
 
-class Patient {
-    private int id;
-    private String name;
-    private int age;
-    private String gender;
-    private MedicalRecord medicalRecord;
+public class Patient extends Person {
 
-    public Patient(int id, String name, int age, String gender) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.medicalRecord = new MedicalRecord(this);
+    private String illness;
+    private MedicalRecord record;
+
+
+    public Patient(int id, String name, int age, String illness) {
+        super(id, name, age); // super()
+        setIllness(illness);
+        this.record = new MedicalRecord(this);
     }
 
-    public int getId() { return id; }
-    public String getName() { return name; }
-    public MedicalRecord getMedicalRecord() { return medicalRecord; }
+    public void setIllness(String illness) {
+        if (illness == null || illness.isEmpty())
+            throw new IllegalArgumentException("Invalid illness");
+        this.illness = illness;
+    }
+
+    public String getIllness() { return illness; }
+    public MedicalRecord getRecord() { return record; }
+
+
+    @Override
+    public void work() {
+        System.out.println("Patient is receiving treatment");
+    }
 
     @Override
     public String toString() {
-        return "Patient{id=" + id + ", name='" + name + "', age=" + age + ", gender=" + gender + "}";
+        return "Patient -> " + super.toString() + ", Illness=" + illness;
     }
 }

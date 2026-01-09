@@ -2,14 +2,12 @@ package com.example.githubintellijhmsoopproject;
 
 import java.util.Date;
 
-class Appointment {
-    private int id;
+public class Appointment {
     private Patient patient;
     private Doctor doctor;
     private Date date;
 
-    public Appointment(int id, Patient patient, Doctor doctor, Date date) {
-        this.id = id;
+    public Appointment(Patient patient, Doctor doctor, Date date) {
         this.patient = patient;
         this.doctor = doctor;
         this.date = date;
@@ -17,7 +15,7 @@ class Appointment {
 
     @Override
     public String toString() {
-        return "Appointment{id=" + id + ", patient=" + patient.getName() +
+        return "Appointment{patient=" + patient.getName() +
                 ", doctor=" + doctor.getName() + ", date=" + date + "}";
     }
 }
