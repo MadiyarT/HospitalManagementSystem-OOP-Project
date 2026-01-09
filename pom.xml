@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>github-intellij-hms-oop-project</artifactId>
+    <artifactId>HospitalManagementSystem-OOP-Project</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>github-intellij-hms-oop-project</name>
     <description>github-intellij-hms-oop-project</description>
