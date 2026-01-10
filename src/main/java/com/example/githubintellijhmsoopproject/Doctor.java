@@ -7,7 +7,7 @@ public class Doctor extends Person {
 
 
     public Doctor(int id, String name, int age, String specialization, Department department) {
-        super(id, name, age); // super()
+        super(id, name, age);
         setSpecialization(specialization);
         setDepartment(department);
     }
@@ -30,6 +30,7 @@ public class Doctor extends Person {
 
     @Override
     public void work() {
+        super.work();
         System.out.println("Doctor is treating patients");
     }
 

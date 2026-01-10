@@ -32,7 +32,9 @@ public abstract class Person {
     public String getName() { return name; }
     public int getAge() { return age; }
 
-    public abstract void work();
+    public void work() {
+        System.out.println("Person is working");
+    }
 
     @Override
     public String toString() {

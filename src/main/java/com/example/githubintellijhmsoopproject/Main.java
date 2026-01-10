@@ -87,7 +87,8 @@ public class Main {
 
     static void viewMedicalRecord() {
         for (Person p : people) {
-            if (p instanceof Patient pt) {
+            if (p instanceof Patient) {
+                Patient pt = (Patient) p;
                 System.out.println(pt.getRecord());
             }
         }

@@ -7,7 +7,7 @@ public class Patient extends Person {
 
 
     public Patient(int id, String name, int age, String illness) {
-        super(id, name, age); // super()
+        super(id, name, age);
         setIllness(illness);
         this.record = new MedicalRecord(this);
     }
