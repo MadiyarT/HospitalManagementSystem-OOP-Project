@@ -1,4 +1,4 @@
-package com.example.githubintellijhmsoopproject;
+package model;
 
 public abstract class Person {
 
@@ -32,9 +32,7 @@ public abstract class Person {
     public String getName() { return name; }
     public int getAge() { return age; }
 
-    public void work() {
-        System.out.println("Person is working");
-    }
+    public abstract void work();
 
     @Override
     public String toString() {

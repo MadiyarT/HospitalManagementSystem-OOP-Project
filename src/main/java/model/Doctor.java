@@ -1,12 +1,12 @@
-package com.example.githubintellijhmsoopproject;
+package model;
 
 public class Doctor extends Person {
 
     private String specialization;
-    private Department department;
+    private String department;
 
 
-    public Doctor(int id, String name, int age, String specialization, Department department) {
+    public Doctor(int id, String name, int age, String specialization, String department) {
         super(id, name, age);
         setSpecialization(specialization);
         setDepartment(department);
@@ -18,19 +18,18 @@ public class Doctor extends Person {
         this.specialization = specialization;
     }
 
-    public void setDepartment(Department department) {
+    public void setDepartment(String department) {
         if (department == null)
             throw new IllegalArgumentException("Invalid department");
         this.department = department;
     }
 
     public String getSpecialization() { return specialization; }
-    public Department getDepartment() { return department; }
+    public String getDepartment() { return department; }
 
 
     @Override
     public void work() {
-        super.work();
         System.out.println("Doctor is treating patients");
     }
 

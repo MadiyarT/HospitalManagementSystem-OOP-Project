@@ -1,4 +1,4 @@
-package com.example.githubintellijhmsoopproject;
+package model;
 
 public class Patient extends Person {
 

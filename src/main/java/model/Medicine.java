@@ -1,4 +1,4 @@
-package com.example.githubintellijhmsoopproject;
+package model;
 
 class Medicine {
     private String name;

@@ -1,4 +1,4 @@
-package com.example.githubintellijhmsoopproject;
+package model;
 
 import java.util.ArrayList;
 import java.util.List;
